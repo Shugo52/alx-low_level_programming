@@ -2,4 +2,5 @@
 char *_putchar(char s)
 {
 	printf("%c\n", s);
+	return (0);
 }
