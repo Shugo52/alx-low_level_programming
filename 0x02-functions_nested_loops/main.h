@@ -1,6 +1,5 @@
-#include <stdio.h>
-char *_putchar(char s)
-{
-	printf("%c\n", s);
-	return (0);
-}
+#ifndef MAIN_FILE
+#define MAIN_FILE
+int _putchar(char c)
+
+#endif
