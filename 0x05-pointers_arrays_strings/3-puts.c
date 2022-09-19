@@ -1,5 +1,4 @@
-#include "main.h"
-#include "2-strlen.c"
+#include "main"
 
 /**
  * _puts - prints characters
@@ -7,7 +6,7 @@
  * @str: character
  */
 
-_puts(char *str)
+void _puts(char *str)
 {
 	int i;
 
