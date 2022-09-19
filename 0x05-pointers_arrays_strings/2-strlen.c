@@ -5,13 +5,15 @@
  * _strlen - returns string length
  *
  * @s: character
- * @n - integer
+ * @i - integer
  *
  * Return: returns lenght
  */
 int _strlen(char *s)
 {
-	for (int i = 0; s[i] != '\0'; i++)
+	int i;
+
+	for (i = 0; s[i] != '\0'; i++)
 	{}
 	return (i);
 }
