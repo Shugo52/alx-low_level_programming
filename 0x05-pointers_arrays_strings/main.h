@@ -24,4 +24,8 @@ int _putchar(char c);
  * _puts - prints characters
  */
 void _puts(char *str);
+/**
+ * void print_rev - prints reverse
+ */
+void print_rev(char *s);
 #endif
