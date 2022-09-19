@@ -1,5 +1,6 @@
 #include "main.h"
 #include <stdio.h>
+#include "2-strlen.c"
 
 /**
  * puts2 - prints characters
