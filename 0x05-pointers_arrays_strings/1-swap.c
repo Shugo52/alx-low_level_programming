@@ -4,7 +4,7 @@
 /**
  * swap_int - swaps two integers
  *
- * @int tmp: temporary variable
+ * @tmp integer variable
  * @a: integer
  * @b: integer
  */
