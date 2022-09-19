@@ -1,5 +1,5 @@
 #include "main.h"
-#include "4-print_rev.c"
+#include "2-strlen.c"
 
 /**
  * rev_string - printsrev_string reverse
@@ -9,5 +9,13 @@
 
 void rev_string(char *s)
 {
-	print_rev(s);
+	char *tmp = s;
+	int i;
+	int j = 0;
+
+	for (i = (_strlen(s); i >= 0; i--)
+	{
+		s[i] = tmp[j];
+		j++;
+	}
 }
