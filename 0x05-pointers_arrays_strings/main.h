@@ -28,4 +28,8 @@ void _puts(char *str);
  * void print_rev - prints reverse
  */
 void print_rev(char *s);
+/**
+ * void rev_string - prints reverse
+ */
+void rev_string(char *s);
 #endif
