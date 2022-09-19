@@ -4,4 +4,8 @@
  * void reset_to_98 - resets to 98
  */
 void reset_to_98(int *n);
+/**
+ * void swap_int - swaps two integers
+ */
+void swap_int(int *a, int *b);
 #endif
