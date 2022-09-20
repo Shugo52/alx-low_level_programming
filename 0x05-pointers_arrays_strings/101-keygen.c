@@ -1,5 +1,6 @@
 #include "main.h"
 #include <stdio.h>
+#include "100-atoi.c"
 
 /**
  * main - check the code for Holberton School students.
