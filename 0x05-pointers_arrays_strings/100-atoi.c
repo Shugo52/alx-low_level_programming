@@ -14,17 +14,18 @@ int _atoi(char *s)
 	int new_num;
 	int counter = strlen(s);
 	int j = 0;
+	int i;
+	char *new_string;
 
-	for (int i = 0; i < counter; i++)
+	for (i = 0; i < counter; i++)
 	{
 		if (*(s + i) >= '0' && s[i] <= '9')
 		{
 			checker++;
 		}
 	}
-	char *new_string = malloc(checker + 1);
-
-	for (int i = 0; i < counter; i++)
+	new_string = malloc(checker + 1);
+	for (i = 0; i < counter; i++)
 	{
 		if (*(s + i) >= '0' && s[i] <= '9')
 		{
