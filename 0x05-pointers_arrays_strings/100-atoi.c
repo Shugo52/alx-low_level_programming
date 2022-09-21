@@ -1,46 +1,40 @@
-#include "main.h"
-#include "2-strlen.c"
+#include <stdlib.h>
+#include <string.h>
+#include <stdio.h>
 
 /**
- * _atoi - converts string to integer
- * @s: string to convert
+ * _atoi - converts to int
  *
- * Return: returns integer value
+ * @s: character
+ * Return: returns number
  */
 int _atoi(char *s)
 {
-	int i;
-	int np = 0;
-	int c;
-	int d = 1;
-	int num = 0;
+	int checker = 0;
+	int new_num;
+	int counter = strlen(s);
+	int j = 0;
 
-	for (i = 0; i < _strlen(s); i++)
+	for (int i = 0; i < counter; i++)
 	{
-		if (!(s[i] >= '0' && s[i] <= '9') && c > 0)
-			break;
-		if (s[i] == '-')
-			np--;
-		if (s[i] == '+')
-			np++;
-		if (s[i] >= '0' && s[i] <= '9')
+		if (*(s + i) >= '0' && s[i] <= '9')
 		{
-			c++;
+			checker++;
 		}
 	}
-	while (c > 0)
+	char *new_string = malloc(checker + 1);
+
+	for (int i = 0; i < counter; i++)
 	{
-		num += ((s[i - 1] - '0') * d);
-		i--;
-		c--;
-		d *= 10;
+		if (*(s + i) >= '0' && s[i] <= '9')
+		{
+			new_string[j] = s[i];
+			j++;
+		}
 	}
-	if (np >= 0)
-	{
-		num *= 1;
-	} else
-	{
-		num *= -1;
-	}
-	return (num);
+	if (checker == 0)
+		return (0);
+	new_num = atoi(new_string);
+	free(new_string);
+	return (new_num);
 }
