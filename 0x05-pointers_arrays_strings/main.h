@@ -1,8 +1,6 @@
 #ifndef _MAIN_H_
 #define _MAIN_H_
 
-#include "_putchar.c"
-#include "2-strlen.c"
 /**
  * void reset_to_98 - resets to 98
  */
