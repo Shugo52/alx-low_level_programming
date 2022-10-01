@@ -30,8 +30,9 @@ int StringCheck(char *s)
 int main(int argc, char  *argv[])
 {
 	int i;
-	int result = 0;
+	int result;
 
+	result = 0;
 	if (argc > 1)
 	{
 		for (i = 1; i < argc; i++)
