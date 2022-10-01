@@ -14,15 +14,14 @@ int main(int argc, char  *argv[])
 
 	if (argc == 2)
 	{
+		int money;
+
 		if (strchr(argv[argc - 1], '-'))
 		{
 			printf("0\n");
 			return (1);
 		}
-		int money;
-
 		money = atoi(argv[argc - 1]);
-
 		while (money > 0)
 		{
 			if (money % 25 == 0)
