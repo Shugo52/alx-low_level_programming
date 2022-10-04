@@ -16,10 +16,10 @@ int main(int argc, char  *argv[])
 	{
 		int money;
 
-		if (strchr(argv[argc - 1], '-'))
+		if (atoi(argv[argc - 1]) < 0)
 		{
 			printf("0\n");
-			return (1);
+			return (0);
 		}
 		money = atoi(argv[argc - 1]);
 		while (money > 0)
@@ -38,7 +38,7 @@ int main(int argc, char  *argv[])
 				money -= 2;
 			} else
 			{
-				money--;
+				money -= 1;
 			}
 			coins++;
 		}
