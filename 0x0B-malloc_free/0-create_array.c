@@ -1,5 +1,5 @@
 #include "main.h"
-
+#include <stddef.h>
 /**
  * create_array - func to create array
  *
@@ -15,5 +15,5 @@ char *create_array(unsigned int size, char c)
 	if (size == 0)
 		return (NULL);
 	arr[0] = c;
-	return (p = &arr);
+	return (p = arr);
 }
