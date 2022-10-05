@@ -12,7 +12,7 @@
 char *str_concat(char *s1, char *s2)
 {
 	size_t i;
-	int j;
+	size_t j;
 	char *new_str;
 	size_t n;
 
@@ -38,7 +38,7 @@ char *str_concat(char *s1, char *s2)
 				new_str[i] = s2[j];
 			}
 		}
-		j++
+		j++;
 	}
 	return (new_str);
 	free(new_str);
