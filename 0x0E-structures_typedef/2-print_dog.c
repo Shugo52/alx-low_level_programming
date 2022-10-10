@@ -3,9 +3,9 @@
 #include <stddef.h>
 #include <stdlib.h>
 /**
- * print_dog - prints info about dog
+ * print_dog - prints about dog
  *
- * @dog: dog properties
+ * @d: structure
  */
 void print_dog(struct dog *d)
 {
@@ -18,9 +18,9 @@ void print_dog(struct dog *d)
 	if (!(d->age))
 		printf("Age: (nil)\n");
 	if (d->age)
-                printf("Age: %f\n", d->age);
+		printf("Age: %f\n", d->age);
 	if (d->owner == NULL)
-                printf("Owner: (nil)\n");
-        if (d->owner)
-                printf("Owner: %s\n", d->owner);
+		printf("Owner: (nil)\n");
+	if (d->owner)
+		printf("Owner: %s\n", d->owner);
 }
