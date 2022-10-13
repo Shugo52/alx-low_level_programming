@@ -11,10 +11,6 @@ void print_numbers(const char *separator, const unsigned int n, ...)
 	unsigned int i;
 	va_list ap;
 
-	/*to check for number of arguments*/
-	if (n == 0)
-		exit(0);
-
 	/*the porcess of printing numbers passed as arguments*/
 	va_start(ap, n);
 	if (n)
