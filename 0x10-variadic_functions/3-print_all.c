@@ -6,63 +6,42 @@
 void print_all(const char * const format, ...)
 {
 	va_list ap;
-	int i, n;
+	size_t i;
 	char *tmp_string;
+	char *separator;
 
 	i = 0;
-	n = strlen(format);
+	separator = ", ";
 	va_start(ap, format);
-	while (i < n - 1)
+	while (i < strlen(format))
 	{
-		switch(format[i])
+		if (i == (strlen(format) - 1))
+			separator = "";
+		switch (format[i])
 		{
 			case 'c':
-			printf("%c, ", va_arg(ap, int));
+			printf("%c%s", va_arg(ap, int), separator);
 			break;
 			case 'i':
-			printf("%d, ", va_arg(ap, int));
+			printf("%d%s", va_arg(ap, int), separator);
 			break;
 			case 'f':
-			printf("%f, ", va_arg(ap, double));
+			printf("%f%s", va_arg(ap, double), separator);
 			break;
 			case 's':
 			tmp_string = va_arg(ap, char *);
-			if (tmp_string == NULL)
+			if (tmp_string)
 			{
-				printf("(nil)");
+				printf("%s%s", tmp_string, separator);
 				break;
 			}
-			printf("%s, ", tmp_string);
+			printf("(nil)");
 			break;
 			default:
 			break;
 		}
 		i++;
 	}
-	switch(format[i])
-                {
-                        case 'c':
-                        printf("%c", va_arg(ap, int));
-                        break;
-                        case 'i':
-                        printf("%d", va_arg(ap, int));
-                        break;
-                        case 'f':
-                        printf("%f", va_arg(ap, double));
-                        break;
-                        case 's':
-                        tmp_string = va_arg(ap, char *);
-                        if (tmp_string == NULL)
-                        {
-                                printf("(nil)");
-                                break;
-                        }
-                        printf("%s", tmp_string);
-                        break;
-                        default:
-                        break;
-                }
-
 	va_end(ap);
 	printf("\n");
 }
