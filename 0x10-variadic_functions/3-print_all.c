@@ -17,6 +17,7 @@ void print_all(const char * const format, ...)
 	{
 		if (i == (strlen(format) - 1))
 			separator = "";
+	/*checks for each datatype c - character i - integer f - float s - string*/
 		switch (format[i])
 		{
 			case 'c':
