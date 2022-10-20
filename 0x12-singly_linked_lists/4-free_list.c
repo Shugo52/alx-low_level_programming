@@ -1,4 +1,4 @@
-#include "list.h"
+#include "lists.h"
 /**
  * free_list - frees list
  *
@@ -7,7 +7,7 @@
 void free_list(list_t *head)
 {
 	if (!head)
-		return;
+		exit(0);
 
 	if (head->next)
 		free_list(head->next);
