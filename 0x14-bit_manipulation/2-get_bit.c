@@ -13,6 +13,8 @@ int get_bit(unsigned long int n, unsigned int index)
 	int i, j;
 	int temp[64];
 
+	if (index >= sizeof(n) * 8)
+		return (-1);
 	if (n == 0)
 	{
 		tmp[0] = 0;
