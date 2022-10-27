@@ -7,23 +7,8 @@
  */
 void print_binary(unsigned long int n)
 {
-	int tmp[64];
-	int i, j;
+	if (n > 1)
+		print_binary(n >> 1);
 
-	if (n == 0)
-	{
-		_putchar('0');
-	}
-
-	if (n)
-	{
-		for (i = 0 ; n > 0; i++)
-		{
-			tmp[i] = n % 2;
-			n /= 2;
-		}
-
-		for (j = i - 1; j >= 0; j--)
-			_putchar(tmp[j] + '0');
-	}
+	_putchar((n & 1) + 48);
 }
