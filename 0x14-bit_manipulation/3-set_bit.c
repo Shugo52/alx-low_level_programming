@@ -3,7 +3,8 @@
  * set_bit - set bit to 1
  *
  * @n: address of integer
- * @index: index to chsnge to bit value
+ * @index: index to change to bit value
+ * Return: 1 if successful -1 if fail
  */
 int set_bit(unsigned long int *n, unsigned int index)
 {
