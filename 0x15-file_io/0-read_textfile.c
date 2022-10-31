@@ -19,7 +19,7 @@ ssize_t read_textfile(const char *filename, size_t letters)
 	fd1 = open(filename, O_RDWR);
 	/*fd[1] = open(filename, O_RDWR);*/
 
-	if (fd1 == -1 || filename == NULL)
+	if (fd1 == -1 || !(filename))
 		return (0);
 
 	size = read(fd1, buffer, letters);
