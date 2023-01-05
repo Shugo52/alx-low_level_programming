@@ -10,23 +10,13 @@
 
 int _strcmp(char *s1, char *s2)
 {
-	int  check, counter1, counter2;
-	size_t i;
-	counter1 = 0;
-	counter2 = 0;
-	if (strlen(s1) == strlen(s2))
+	int i;
+
+	i = 0;
+	while (s1[i] == s2[i])
 	{
-		for (i = 0; i < strlen(s1); i++)
-		{
-			if (s1[i] == s2[i])
-				check += 0;
-			counter1 += s1[i];
-			counter2 += s2[i];
-		}
+		if (s1[i] != '\0')
+			return (0);
 	}
-	if (counter1 > counter2 || strlen(s1) > strlen(s2))
-		return (1);
-	if (counter1 < counter2 || strlen(s1) < strlen(s2))
-		return (-1);
-	return (0);
+	return (s1[i] - s2[i]);
 }
