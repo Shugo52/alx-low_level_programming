@@ -1,6 +1,5 @@
 #include "main.h"
-#include <stdio.h>
-#define UNUSED(x) (void)(x)
+
 /**
  * main - main function
  * @argc: argumentc
