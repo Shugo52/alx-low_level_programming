@@ -2,14 +2,13 @@
 
 /**
  * main - main function
- * @argc: argumentc
+ * @argc: argument c
  * @argv: vector of arguments
- *Return: always 0
+ * Return: always 0
  */
 int main(int argc, char  *argv[])
 {
-	int i;
-	int result;
+	int i, result;
 
 	result = 0;
 	for (i = 1; i < argc; i++)

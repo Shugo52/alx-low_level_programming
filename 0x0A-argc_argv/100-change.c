@@ -31,7 +31,7 @@ int main(int argc, char  *argv[])
 				money -= 5;
 			else if (money % 2 == 0)
 				money -= 2;
-			else
+			else if (money % 1 == 0)
 				money -= 1;
 			coins++;
 		}
