@@ -1,5 +1,11 @@
 #ifndef _DOG_H_
 #define _DOG_H_
+
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+#include <stddef.h>
+
 /**
  * struct dog - structure for dog
  *
