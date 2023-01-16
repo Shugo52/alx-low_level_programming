@@ -36,7 +36,7 @@ void print_all(const char * const format, ...)
 				printf("%s%s", tmp_string, separator);
 				break;
 			}
-			printf("(nil)");
+			printf("(nil)%s", separator);
 			break;
 			default:
 			break;
