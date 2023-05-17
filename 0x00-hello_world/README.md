@@ -14,3 +14,10 @@ The beginning of C in the ALX SE program.
 - [Betty Coding Style](https://intranet.alxswe.com/rltoken/Iu2Vb1CbDPMHuDJG1iILKA)
 - [Hash-bang under the hood](https://intranet.alxswe.com/rltoken/zwv5CHLybXN6KFmsjbu_tg)
 - [Linus Torvalds on C vs. C++](https://intranet.alxswe.com/rltoken/JrokM8Pk6bd9wPqQvEfSAA)
+
+## Tasks
+
+<details>
+  <summary><a href="./0-preprocessor">0. Preprocessor</a></summary>
+  ![Screenshot from 2023-05-17 03-00-41](https://github.com/Shugo52/alx-low_level_programming/assets/87946002/b403df20-6b7c-439f-8339-b5cd85650d6c)
+</details>
