@@ -12,7 +12,7 @@
 int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 {
 	/*variable declaration*/
-	int index;
+	size_t index;
 	hash_node_t *node = malloc(sizeof(hash_node_t)), *current_node;
 
 	if (!key || !ht || !node)
@@ -24,16 +24,7 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 
 	/*computing the index*/
 	index = key_index((unsigned char *)key, ht->size);
-
-	/*retrieving current index node*/
 	current_node = ht->array[index];
-
-	/*insert node directly into hash table if current index is empty*/
-	if (current_node == NULL)
-	{
-		ht->array[index] = node;
-		return (1);
-	}
 
 	/*update node if key exists*/
 	while (current_node)
