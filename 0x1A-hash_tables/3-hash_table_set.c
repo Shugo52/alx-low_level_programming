@@ -1,50 +1,53 @@
 #include "hash_tables.h"
 
 /**
- * hash_table_set - Adds an element to a hashtable.
- *
- * @ht: Hashtable.
- * @key: Hash key.
- * @value: Hash value.
- *
- * Return: 1 on successful add, 0 otherwise.
- */
+ * hash_table_set - sets up a hash table
+ * 
+ * @ht: pointer to hash table to set up
+ * @key: key to add to hash table
+ * @value: value attached to key
+ * Return: 1 if success 0 otherwise
+*/
+
 int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 {
-	size_t index;
-	hash_node_t *node, *location;
+	/*variable declaration*/
+	int index;
+	hash_node_t *node = malloc(sizeof(hash_node_t)), *current_node;
 
-	/* Validate input */
-	if (!ht || !key || !value)
+	/**/
+	if (!key || !ht || !node)
 		return (0);
 
-	/* Get key index */
-	index = key_index((unsigned char *) key, ht->size);
-	location = ht->array[index];
+	/*initializing node*/
+	node->value = strdup(value);
+	node->key = strdup(key);
 
-	/* If node is present in index, modify it */
-	while (location)
+	/*computing the index*/
+	index = key_index((unsigned char *)key, ht->size);
+
+	/*retrieving current index node*/
+	current_node = ht->array[index];
+
+	/*insert node into hash table if current index is empty*/
+	if (current_node == NULL)
 	{
-		if (!(strcmp(location->key, key)))
-		{
-			location->value = strdup(value);
-			return (1);
-		}
-		location = location->next;
+		ht->array[index] = node;
+		return (1);
 	}
 
-	/* Create hash node */
-	node = malloc(sizeof(hash_node_t));
-	if (!node)
-		return (0);
-
-	/* Populate node with values */
-	node->key = strdup(key);
-	node->value = strdup(value);
-
-	/* Insert node in hashtable */
-	node->next = ht->array[index];
-	ht->array[index] = node;
-
-	return (1);
+	/*insert node if current index is not NULL*/
+	if (current_node)
+	{
+		/*update node if key exists*/
+		if (strcmp(current_node->key, key))
+		{
+			current_node->value = strdup(value);
+			return (1);
+		}
+		node->next = current_node;
+		ht->array[index] = node;
+		return (1);
+	}
+	return (0);
 }
